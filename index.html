@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Encryption/Decryption with AES</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Encryption/Decryption (AES)</h1>
+
+      <div class="section">
+        <h2>Encrypt an Image</h2>
+        <input type="file" id="uploadImage" accept="image/*" />
+        <input
+          type="text"
+          id="encryptionKeyInput"
+          placeholder="Enter a key for encryption"
+        />
+        <button onclick="encryptImage()">Encrypt Image</button>
+        <p id="encryptionKeyDisplay"></p>
+      </div>
+
+      <div class="section">
+        <h2>Decrypt an Image</h2>
+        <input
+          type="file"
+          id="uploadEncryptedImage"
+          accept="application/octet-stream"
+        />
+        <input
+          type="text"
+          id="decryptionKey"
+          placeholder="Enter the encryption key"
+        />
+        <button onclick="decryptImage()">Decrypt Image</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Connect with us</p>
+      <a href="https://www.linkedin.com/in/darshak-kamalia" target="_blank"
+        >LinkedIn</a
+      >
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
