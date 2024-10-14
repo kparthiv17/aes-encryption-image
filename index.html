@@ -20,39 +20,23 @@
         <nav class="nav-menu">
           <a href="/">Home</a>
           <a href="/pages/about.html">About</a>
-          <a href="/pages//contact.html">Contact</a>
+          <a href="/pages/contact.html">Contact</a>
         </nav>
       </div>
     </header>
 
     <div class="container">
-      <h1>Image Encryption/Decryption (AES)</h1>
-
-      <div class="section" id="encrypt">
-        <h2>Encrypt an Image</h2>
-        <input type="file" id="uploadImage" accept="image/*" />
-        <input
-          type="text"
-          id="encryptionKeyInput"
-          placeholder="Enter a key for encryption"
-        />
-        <button onclick="encryptImage()">Encrypt Image</button>
-        <p id="encryptionKeyDisplay"></p>
-      </div>
-
-      <div class="section" id="decrypt">
-        <h2>Decrypt an Image</h2>
-        <input
-          type="file"
-          id="uploadEncryptedImage"
-          accept="application/octet-stream"
-        />
-        <input
-          type="text"
-          id="decryptionKey"
-          placeholder="Enter the encryption key"
-        />
-        <button onclick="decryptImage()">Decrypt Image</button>
+      <div class="welcome-message">
+        <h2>Welcome to Secure Images</h2>
+        <p>
+          Encrypt and decrypt your images securely with our AES encryption tool.
+        </p>
+        <button
+          class="btn btn-primary animated-btn"
+          onclick="window.location.href='/pages/enc-dec-page.html'"
+        >
+          Start Encryption-Decryption
+        </button>
       </div>
     </div>
 
