@@ -32,6 +32,7 @@ function encryptImage() {
   }
 
   if (file) {
+    const originalFileName = file.name;
     const reader = new FileReader();
     reader.onload = function (e) {
       const arrayBuffer = e.target.result;
@@ -52,7 +53,7 @@ function encryptImage() {
       });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "encrypted-image.enc";
+      link.download = originalFileName + ".enc";
       link.click();
     };
     reader.readAsArrayBuffer(file);
@@ -73,6 +74,7 @@ function decryptImage() {
   }
 
   if (file) {
+    const originalFileName = file.name.replace(".enc", "");
     const reader = new FileReader();
     reader.onload = function (e) {
       const encryptedText = e.target.result;
@@ -92,7 +94,7 @@ function decryptImage() {
         const blob = new Blob([decryptedBuffer], { type: "image/jpeg" });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = "decrypted-image.jpg";
+        link.download = originalFileName;
         link.click();
       } catch (error) {
         alert("Decryption failed. Incorrect key.");
