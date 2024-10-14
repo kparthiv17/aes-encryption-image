@@ -7,10 +7,28 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <header>
+      <div class="header-container">
+        <h1 class="header-title">
+          <img
+            src="/images/securitylogo.png"
+            alt="securitylogo"
+            class="image"
+          />
+          Secure Images
+        </h1>
+        <nav class="nav-menu">
+          <a href="/">Home</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages//contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
     <div class="container">
       <h1>Image Encryption/Decryption (AES)</h1>
 
-      <div class="section">
+      <div class="section" id="encrypt">
         <h2>Encrypt an Image</h2>
         <input type="file" id="uploadImage" accept="image/*" />
         <input
@@ -22,7 +40,7 @@
         <p id="encryptionKeyDisplay"></p>
       </div>
 
-      <div class="section">
+      <div class="section" id="decrypt">
         <h2>Decrypt an Image</h2>
         <input
           type="file"
@@ -39,10 +57,28 @@
     </div>
 
     <footer>
-      <p>Connect with us</p>
-      <a href="https://www.linkedin.com/in/darshak-kamalia" target="_blank"
-        >LinkedIn</a
-      >
+      <div class="footermain">
+        <div class="logomain">
+          <a href="https://www.linkedin.com/in/darshak-kamalia" target="_blank">
+            <img
+              src="/images/sociallogo/linkdinlogo.png"
+              alt="LinkedIn Logo"
+              class="image"
+          /></a>
+          <a href="https://x.com/" target="_blank">
+            <img
+              src="/images/sociallogo/twitterlogo.png"
+              alt="twitterlogo"
+              class="image"
+          /></a>
+          <a href="https://github.com/" target="_blank">
+            <img
+              src="/images/sociallogo/githublogo.png"
+              alt="githublogo"
+              class="image"
+          /></a>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
